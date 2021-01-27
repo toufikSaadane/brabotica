@@ -18,7 +18,7 @@ class CategoryController extends AbstractController
      */
     public function index(CategoryRepository $categoryRepository): Response
     {
-        dd($categoryRepository->find(4)->getProducts());
+        dd($categoryRepository->findAll());
         return $this->render('category/index.html.twig', [
             'controller_name' => 'CategoryController',
         ]);
